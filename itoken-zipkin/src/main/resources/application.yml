@@ -5,3 +5,4 @@ spring:
       name: itoken-zipkin
       label: master
       profile: dev
+
