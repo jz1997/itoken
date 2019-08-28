@@ -211,7 +211,7 @@
     <orderEntry type="library" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.projectreactor.addons:reactor-extra:3.2.3.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: de.codecentric:spring-boot-admin-server-ui:2.1.6" level="project" />
     <orderEntry type="library" name="Maven: de.codecentric:spring-boot-admin-server-cloud:2.1.6" level="project" />
+    <orderEntry type="library" name="Maven: de.codecentric:spring-boot-admin-server-ui:2.1.6" level="project" />
   </component>
 </module>
