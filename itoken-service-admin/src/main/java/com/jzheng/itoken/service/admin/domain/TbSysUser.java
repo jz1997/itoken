@@ -4,6 +4,11 @@ import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.*;
 
+/**
+ * TbSysUser 实体类
+ * @author jzheng
+ * @date 2019/8/29
+ */
 @Table(name = "tb_sys_user")
 public class TbSysUser {
     /**
