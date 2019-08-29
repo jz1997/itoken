@@ -3,6 +3,7 @@ package com.jzheng.itoken.service.admin.mapper.test;
 import com.jzheng.itoken.service.admin.ServiceAdminApplication;
 import com.jzheng.itoken.service.admin.domain.TbSysUser;
 import com.jzheng.itoken.service.admin.mapper.TbSysUserMapper;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,6 @@ public class TbSysUserMapperTest {
     @Test
     public void SelectTest() {
         TbSysUser tbSysUser = mapper.selectByPrimaryKey("12345");
+        Assert.assertNull(tbSysUser);
     }
 }
