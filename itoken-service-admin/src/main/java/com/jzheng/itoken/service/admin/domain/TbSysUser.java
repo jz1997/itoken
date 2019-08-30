@@ -1418,4 +1418,69 @@ public class TbSysUser {
     public void setExtendD4(Date extendD4) {
         this.extendD4 = extendD4;
     }
+
+    @Override
+    public String toString() {
+        return "TbSysUser{" +
+                "userCode='" + userCode + '\'' +
+                ", loginCode='" + loginCode + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", phone='" + phone + '\'' +
+                ", sex='" + sex + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", sign='" + sign + '\'' +
+                ", wxOpenid='" + wxOpenid + '\'' +
+                ", mobileImei='" + mobileImei + '\'' +
+                ", userType='" + userType + '\'' +
+                ", refCode='" + refCode + '\'' +
+                ", refName='" + refName + '\'' +
+                ", mgrType='" + mgrType + '\'' +
+                ", pwdSecurityLevel=" + pwdSecurityLevel +
+                ", pwdUpdateDate=" + pwdUpdateDate +
+                ", pwdUpdateRecord='" + pwdUpdateRecord + '\'' +
+                ", pwdQuestion='" + pwdQuestion + '\'' +
+                ", pwdQuestionAnswer='" + pwdQuestionAnswer + '\'' +
+                ", pwdQuestion2='" + pwdQuestion2 + '\'' +
+                ", pwdQuestionAnswer2='" + pwdQuestionAnswer2 + '\'' +
+                ", pwdQuestion3='" + pwdQuestion3 + '\'' +
+                ", pwdQuestionAnswer3='" + pwdQuestionAnswer3 + '\'' +
+                ", pwdQuestUpdateDate=" + pwdQuestUpdateDate +
+                ", lastLoginIp='" + lastLoginIp + '\'' +
+                ", lastLoginDate=" + lastLoginDate +
+                ", freezeDate=" + freezeDate +
+                ", freezeCause='" + freezeCause + '\'' +
+                ", userWeight=" + userWeight +
+                ", status='" + status + '\'' +
+                ", createBy='" + createBy + '\'' +
+                ", createDate=" + createDate +
+                ", updateBy='" + updateBy + '\'' +
+                ", updateDate=" + updateDate +
+                ", remarks='" + remarks + '\'' +
+                ", corpCode='" + corpCode + '\'' +
+                ", corpName='" + corpName + '\'' +
+                ", extendS1='" + extendS1 + '\'' +
+                ", extendS2='" + extendS2 + '\'' +
+                ", extendS3='" + extendS3 + '\'' +
+                ", extendS4='" + extendS4 + '\'' +
+                ", extendS5='" + extendS5 + '\'' +
+                ", extendS6='" + extendS6 + '\'' +
+                ", extendS7='" + extendS7 + '\'' +
+                ", extendS8='" + extendS8 + '\'' +
+                ", extendI1=" + extendI1 +
+                ", extendI2=" + extendI2 +
+                ", extendI3=" + extendI3 +
+                ", extendI4=" + extendI4 +
+                ", extendF1=" + extendF1 +
+                ", extendF2=" + extendF2 +
+                ", extendF3=" + extendF3 +
+                ", extendF4=" + extendF4 +
+                ", extendD1=" + extendD1 +
+                ", extendD2=" + extendD2 +
+                ", extendD3=" + extendD3 +
+                ", extendD4=" + extendD4 +
+                '}';
+    }
 }

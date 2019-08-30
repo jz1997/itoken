@@ -33,6 +33,7 @@
         <tk-mybatis.version>2.0.2</tk-mybatis.version>
         <pagehelper.version>1.2.5</pagehelper.version>
         <junit4.version>4.12</junit4.version>
+        <guava.version>28.0-jre</guava.version>
     </properties>
 
     <dependencyManagement>
@@ -127,6 +128,14 @@
                 <version>${tk-mybatis.version}</version>
             </dependency>
             <!-- MyBatis End -->
+
+            <!-- Google Guava Begin -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <!-- Google Guava End -->
         </dependencies>
     </dependencyManagement>
 

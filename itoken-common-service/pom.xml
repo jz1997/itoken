@@ -17,6 +17,15 @@
     <inceptionYear>2019-Now</inceptionYear>
 
     <dependencies>
+
+        <!-- Project Begin -->
+        <dependency>
+            <groupId>com.jzheng</groupId>
+            <artifactId>itoken-common</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!-- Project End -->
+
         <!-- Spring Boot Begin -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -69,5 +78,12 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
         </dependency>
         <!-- Database End -->
+
+        <!-- Google Guava Begin -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <!-- Google Guava End -->
     </dependencies>
 </project>

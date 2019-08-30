@@ -5,6 +5,8 @@ import com.jzheng.itoken.service.admin.mapper.TbSysUserMapper;
 import com.jzheng.itoken.service.admin.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
+import tk.mybatis.mapper.entity.Example;
 
 /**
  * @author jzheng
@@ -22,6 +24,8 @@ public class AdminServiceImpl implements AdminService {
      */
     @Override
     public void register(TbSysUser tbSysUser) {
+        // md5 进行密码加密
+        tbSysUser.setPassword(DigestUtils.md5DigestAsHex(tbSysUser.getPassword().getBytes()));
         tbSysUserMapper.insert(tbSysUser);
     }
 
@@ -33,6 +37,20 @@ public class AdminServiceImpl implements AdminService {
      */
     @Override
     public TbSysUser login(String loginCode, String plantPassword) {
+        Example example = new Example(TbSysUser.class);
+        example.createCriteria().andEqualTo("loginCode", loginCode);
+
+        TbSysUser tbSysUser = tbSysUserMapper.selectOneByExample(example);
+
+        // 密码加密 进行比对
+        String hexPassword = DigestUtils.md5DigestAsHex(plantPassword.getBytes());
+        
+        // 登录成功
+        if (hexPassword.equals(tbSysUser.getPassword())) {
+            return tbSysUser;
+        }
+
+        // 登录失败
         return null;
     }
 }

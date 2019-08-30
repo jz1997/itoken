@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.DigestUtils;
 
 import java.util.Date;
 import java.util.UUID;
@@ -22,8 +23,7 @@ import java.util.UUID;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ServiceAdminApplication.class)
-@Transactional
-@Rollback
+
 public class AdminServiceTest {
 
     @Autowired
@@ -35,7 +35,7 @@ public class AdminServiceTest {
     @Test
     public void login() {
         TbSysUser tbSysUser
-                = adminService.login("jzheng", "123456");
+                = adminService.login("jzheng@qq.com", "123456");
         Assert.assertNotNull(tbSysUser);
     }
 
@@ -46,16 +46,16 @@ public class AdminServiceTest {
     @Test
     public void register() {
         TbSysUser tbSysUser = new TbSysUser();
-        tbSysUser.setLoginCode("jzheng");
+        tbSysUser.setLoginCode("jzheng@qq.com");
         tbSysUser.setUserCode(UUID.randomUUID().toString());
         tbSysUser.setUserName("jzheng");
-        tbSysUser.setPassword("123456");
+        tbSysUser.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
         tbSysUser.setUserType("管理员");
         tbSysUser.setMgrType("2");
         tbSysUser.setStatus("0");
-        tbSysUser.setCreateBy("jzheng");
+        tbSysUser.setCreateBy(tbSysUser.getUserCode());
         tbSysUser.setCreateDate(new Date());
-        tbSysUser.setUpdateBy("jzheng");
+        tbSysUser.setUpdateBy(tbSysUser.getUserCode());
         tbSysUser.setUpdateDate(new Date());
         tbSysUser.setCorpCode("123");
         tbSysUser.setCorpName("123");
