@@ -96,6 +96,14 @@ public class BaseResult implements Serializable {
          */
         private String message;
 
+        public Error() {
+        }
+
+        public Error(String field, String message) {
+            this.field = field;
+            this.message = message;
+        }
+
         public String getField() {
             return field;
         }

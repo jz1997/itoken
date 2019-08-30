@@ -34,6 +34,8 @@
         <pagehelper.version>1.2.5</pagehelper.version>
         <junit4.version>4.12</junit4.version>
         <guava.version>28.0-jre</guava.version>
+        <spring-cloud-openfeign.version>2.1.0.RC3</spring-cloud-openfeign.version>
+        <spring-cloud-dashboard.version>2.1.0.RC3</spring-cloud-dashboard.version>
     </properties>
 
     <dependencyManagement>
@@ -46,12 +48,30 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Spring Cloud End -->
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud-openfeign.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+                <version>${spring-cloud-dashboard.version}</version>
+            </dependency>
+          <!-- Spring Cloud End -->
 
             <!-- Spring Boot Begin -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
+                <version>2.1.6.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 <version>2.1.6.RELEASE</version>
             </dependency>
             <!-- Spring Boot End -->
@@ -136,6 +156,12 @@
                 <version>${guava.version}</version>
             </dependency>
             <!-- Google Guava End -->
+
+            <dependency>
+                <groupId>net.sourceforge.nekohtml</groupId>
+                <artifactId>nekohtml</artifactId>
+                <version>${nekohtml.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
