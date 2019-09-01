@@ -17,5 +17,9 @@
     <inceptionYear>2019-Now</inceptionYear>
 
     <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
     </dependencies>
 </project>
