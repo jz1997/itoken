@@ -33,7 +33,7 @@
         <tk-mybatis.version>2.0.2</tk-mybatis.version>
         <pagehelper.version>1.2.5</pagehelper.version>
         <junit4.version>4.12</junit4.version>
-        <guava.version>28.0-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <spring-cloud-openfeign.version>2.1.0.RC3</spring-cloud-openfeign.version>
         <spring-cloud-dashboard.version>2.1.0.RC3</spring-cloud-dashboard.version>
     </properties>
